@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope, Montserrat } from "next/font/google";
+import { SiteFooter } from "./components/site-footer";
+import { SiteHeader } from "./components/site-header";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -20,7 +22,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${manrope.variable} ${montserrat.variable}`}>
-      <body>{children}</body>
+      <body>
+        <SiteHeader />
+        {children}
+        <SiteFooter />
+      </body>
     </html>
   );
 }
