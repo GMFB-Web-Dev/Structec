@@ -85,7 +85,7 @@ export async function POST(request: Request) {
 
   const idempotencyKey = `structec-contact-${crypto.randomUUID()}`;
   const resendPayload = {
-    from: "Structec Website <onboarding@resend.dev>",
+    from: "Structec Website <website@weblaunch.co.nz>",
     to: [toEmail],
     reply_to: email,
     subject: `New Structec enquiry from ${name}`,

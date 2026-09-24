@@ -23,7 +23,7 @@ RESEND_API_KEY=re_xxxxxxxxx
 
 The endpoint accepts same-origin requests and explicitly allows `https://structec.vercel.app`, plus localhost ports 3000 and 3001. It validates input, includes a honeypot field, sends both HTML and plain-text email, sets the visitor's email as the reply-to address, and retries transient Resend failures once with the same idempotency key.
 
-The default sender is `Structec Website <onboarding@resend.dev>`, so only the two variables above are required. Resend's test sender normally delivers to the email attached to the Resend account. For delivery to other inboxes, verify a sending domain in Resend and update the `from` value in `app/api/contact/route.ts`.
+The sender is `Structec Website <website@weblaunch.co.nz>`. The `weblaunch.co.nz` domain is verified in the connected Resend account with sending enabled, so enquiries can be delivered to the address configured in `CONTACT_FORM_TO_EMAIL` without the `resend.dev` testing restriction. Only the two variables above are required.
 
 ## Validation
 
