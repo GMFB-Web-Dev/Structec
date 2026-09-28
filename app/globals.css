@@ -175,7 +175,7 @@ h2 {
 
 /* Header */
 .site-header {
-  position: absolute;
+  position: fixed;
   z-index: 20;
   top: 0;
   right: 0;
@@ -1511,7 +1511,7 @@ h2 {
   }
 
   .site-header {
-    position: absolute;
+    position: fixed;
   }
 
   .nav-bar {
